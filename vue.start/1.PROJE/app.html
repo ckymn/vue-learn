@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <button v-on:click="plusNumber">Plus Number</button>
+        <button v-on:click="minusNumber"> Minus Number</button>
+        <hr>
+        <p>{{number}}</p>
+        <hr>
+        <p>{{number> 10 ? "Number 10'dan buyuktur" : "Number 10'dan kucuktur"}}</p>
+        <hr>
+        <p>{{(number *10)/2}}</p>
+        <hr>
+        <p v-on:mousemove="updateCoords(2,$event)">Kordinatlar: {{x}},{{y}}
+            <span v-on:mousemove.stop>Gizli Bolge</span>
+        </p>
+        <hr>
+        <input type="text" v-on:keyup.enter="showEnter">
+        <hr>
+        <input type="text" v-model="name">
+        <h3>{{name}}</h3>
+        <hr>
+        <button v-on:click="deger++">ARTTIR</button>
+        <button v-on:click="deger--">AZALT</button>
+        <button v-on:click="secondDeger++">2.ARTTIR</button>
+        <p>SONUC : {{deger}} | {{secondDeger}}</p>
+        <p>RESULT : {{ increaseAndDecrease() }} | {{output}}</p>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="./app.js"></script>
+
+</html>

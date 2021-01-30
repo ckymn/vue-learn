@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.proje</title>
+</head>
+
+<body>
+
+    <div id="app-2">
+        <p v-if="seen">Beni Gorebilirsin !</p>
+        <p v-else>Beni Gorebilir misin acaba? </p>
+        <button @click="seen = !seen">Goster/Gizle</button>
+        <hr>
+        <p v-if="sayi < 10">Sayi 10'dan kucuktur !</p>
+        <p v-else-if="sayi >10">Sayi 10'dan buyuktur !</p>
+        <p v-else>Sayi 10'dan esittir !</p>
+        <hr>
+        <p v-show="showParagh">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Amet id ipsa doloremque natus! Optio neque error
+            voluptatum vel et repellendus.</p>
+        <button @click="showParagh = !showParagh">Goster/Gizle</button>
+
+        <hr>
+        <ul>
+            <li v-for="(product , index) in products" :key="product">{{product}}-{{index}}</li>
+        </ul>
+        <button @click="products.push(" hoperlor")>Ekle</button>
+        <hr>
+        <template v-for="(product,index) in products">
+            <h3> {{product}}</h3>
+            <p>{{product}}</p>
+        </template>
+        <hr>
+        <ul>
+            <li v-for="(personel, index) in persons">
+                <ul>
+                    <li v-for="(value,key) in personel">{{key}} : {{value}}</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
