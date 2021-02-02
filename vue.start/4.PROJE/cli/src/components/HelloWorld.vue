@@ -9,7 +9,6 @@ export default {
   name: "HelloWorld",
   props: {
     msg: String,
-    products: Array
   },
 };
 </script>

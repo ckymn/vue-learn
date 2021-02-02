@@ -1,12 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <HelloWorld msg="Merhaba Vue!" />
-  <ProductList @delete:product="deleteProduct" :products="product" />
+  <ProductList @delete="deleteProduct" :getProducts="product" />
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
 import ProductList from "./components/ProductList";
+
 export default {
   name: "App",
   components: {
